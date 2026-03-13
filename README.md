@@ -80,6 +80,17 @@ helm upgrade --install natural ./natural -n adanat
 helm upgrade --install adabas-manager ./adabas-manager -n adanat
 ```
 
+Default values behavior:
+
+- `helm upgrade --install adabas ./adabas ...` uses `./adabas/values.yaml`
+- `helm upgrade --install natural ./natural ...` uses `./natural/values.yaml`
+- `helm upgrade --install adabas-manager ./adabas-manager ...` uses `./adabas-manager/values.yaml`
+
+Override defaults for a specific chart using:
+
+- `-f <custom-values.yaml>`
+- `--set key=value`
+
 Validate deployment:
 
 ```bash
