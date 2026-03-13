@@ -62,11 +62,11 @@ git --version
 Clone the repository and navigate to the Helm charts folder:
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-folder>/k8/helm
+git clone https://github.com/SoftwareAG/helm-charts.git
+cd helm-charts
 ```
 
-Replace `<your-repository-url>` with your Git repository URL.
+
 
 ## Deploy All Charts In Single Namespace
 
