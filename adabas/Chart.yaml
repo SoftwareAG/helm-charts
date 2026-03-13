@@ -1,0 +1,7 @@
+apiVersion: v2
+name: adabas
+description: Helm chart for Adabas CE StatefulSet
+icon: https://avatars.githubusercontent.com/u/348262
+type: application
+version: 0.1.0
+appVersion: "7.4.0"

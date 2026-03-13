@@ -1,0 +1,7 @@
+apiVersion: v2
+name: natural
+description: Helm chart for Natural CE
+icon: https://avatars.githubusercontent.com/u/348262
+type: application
+version: 0.1.0
+appVersion: "9.3.3"

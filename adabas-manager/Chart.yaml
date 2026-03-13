@@ -1,0 +1,7 @@
+apiVersion: v2
+name: adabas-manager
+description: Helm chart for Adabas Manager
+icon: https://avatars.githubusercontent.com/u/348262
+type: application
+version: 0.1.0
+appVersion: "9.4.0"

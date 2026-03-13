@@ -1,0 +1,40 @@
+configMap:
+  name: nat-configmap
+  data:
+    ACCEPT_EULA: "Y"
+
+deployment:
+  name: nat-deployment
+  appLabel: nat
+  replicas: 1
+  container:
+    name: nat
+    image:
+      repository: softwareag/natural-ce
+      tag: "9.3.3"
+      pullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: "40m"
+        memory: "40Mi"
+      limits:
+        cpu: "50m"
+        memory: "52Mi"
+    probe:
+      port: 2700
+      livenessInitialDelaySeconds: 20
+      livenessPeriodSeconds: 10
+      readinessInitialDelaySeconds: 10
+      readinessPeriodSeconds: 5
+    port:
+      name: natport
+      containerPort: 2700
+
+service:
+  name: nat-service
+  type: ClusterIP
+  port:
+    name: natport
+    protocol: TCP
+    port: 2700
+    targetPort: 2700

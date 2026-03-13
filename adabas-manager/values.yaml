@@ -1,0 +1,27 @@
+configMap:
+  name: adabasmanager-configmap
+  data:
+    ACCEPT_EULA: "Y"
+
+deployment:
+  name: adabasmanager-deployment
+  appLabel: adabasmanager
+  replicas: 1
+  container:
+    name: adabasmanager
+    image:
+      repository: softwareag/adabasmanager-ce
+      tag: "9.4.0"
+      pullPolicy: IfNotPresent
+    port:
+      name: adamgrport
+      containerPort: 4990
+
+service:
+  name: adabasmanager-service
+  type: ClusterIP
+  port:
+    name: adamgrport
+    protocol: TCP
+    port: 4990
+    targetPort: 4990

@@ -1,0 +1,42 @@
+configMap:
+  name: adabas-configmap
+  data:
+    ACCEPT_EULA: "Y"
+    ADABAS_DBID: "12"
+    ADABAS_DB_CREATION: "demodb"
+
+statefulSet:
+  name: adabas-statefulset
+  appLabel: adabas
+  serviceName: adabas-db
+  replicas: 1
+  container:
+    name: adabas
+    image:
+      repository: softwareag/adabas-ce
+      tag: "7.4.0"
+      pullPolicy: IfNotPresent
+    ports:
+    - name: adaport
+      containerPort: 60001
+    - name: http
+      containerPort: 8190
+    - name: https
+      containerPort: 8191
+
+service:
+  name: adabas-db
+  clusterIP: None
+  ports:
+  - name: adaport
+    protocol: TCP
+    port: 60001
+    targetPort: 60001
+  - name: http
+    protocol: TCP
+    port: 8190
+    targetPort: 8190
+  - name: https
+    protocol: TCP
+    port: 8191
+    targetPort: 8191
