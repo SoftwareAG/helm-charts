@@ -15,7 +15,7 @@ The charts are designed to be installed independently while sharing one Kubernet
 - These charts are sample artifacts provided for testing and evaluation.
 - These charts are not production-hardened and should not be used as-is for production workloads.
 - Validate security, sizing, backups, policies, and operational controls before any production use.
-- For issues or improvement requests, open a ticket in your internal tracking system or contact your SoftwareAG support team.
+- For issues or improvement requests, open a ticket or contact your SoftwareAG support team.
 
 
 ## Prerequisites
