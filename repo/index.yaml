@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  adabas:
+  - apiVersion: v2
+    appVersion: 7.4.0
+    created: "2026-03-30T13:38:18.4195223+02:00"
+    description: Helm chart for Adabas CE StatefulSet
+    digest: 7bf49fe044a0a473b6e5bf9c761c7f07d79aed554bc3164a7b70332cc1e52b22
+    icon: https://avatars.githubusercontent.com/u/348262
+    name: adabas
+    type: application
+    urls:
+    - https://github.com/SoftwareAG/helm-charts.git/adabas-0.1.0.tgz
+    version: 0.1.0
+  adabas-manager:
+  - apiVersion: v2
+    appVersion: 9.4.0
+    created: "2026-03-30T13:38:18.4343468+02:00"
+    description: Helm chart for Adabas Manager
+    digest: a6d409f7b8d06a505225ee835c53d2f0dfb2b62e3de904473f4bd2a9ef64ed41
+    icon: https://avatars.githubusercontent.com/u/348262
+    name: adabas-manager
+    type: application
+    urls:
+    - https://github.com/SoftwareAG/helm-charts.git/adabas-manager-0.1.0.tgz
+    version: 0.1.0
+  natural:
+  - apiVersion: v2
+    appVersion: 9.3.3
+    created: "2026-03-30T13:38:18.452616+02:00"
+    description: Helm chart for Natural CE
+    digest: 8be353ffc589108f6cca90e2972af96fa26736f680dc34547bfbb49380f1ec37
+    icon: https://avatars.githubusercontent.com/u/348262
+    name: natural
+    type: application
+    urls:
+    - https://github.com/SoftwareAG/helm-charts.git/natural-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-03-30T13:38:18.4038269+02:00"
