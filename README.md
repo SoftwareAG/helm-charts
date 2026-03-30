@@ -98,6 +98,31 @@ kubectl get all -n adanat
 kubectl get configmap -n adanat
 ```
 
+## Test Products Locally With Port Forwarding
+
+After services are running in namespace `adanat`, forward ports to your local machine to access product UIs and endpoints.
+
+Run these commands in separate terminals:
+
+```bash
+kubectl port-forward service/adabasmanager-service 4990:4990 -n adanat
+kubectl port-forward service/nat-service 2700:2700 -n adanat
+```
+
+Keep both port-forward sessions running while you test.
+
+Access Adabas Manager UI:
+
+- Open: `https://localhost:4990`
+- If your browser shows a certificate warning in local test environments, proceed with the browser's advanced/continue option.
+
+Connect NaturalONE to NDV server:
+
+- In NaturalONE, create or edit the NDV server connection.
+- Set host to `localhost`.
+- Set port to `2700`.
+- Save the connection and run a connection test from NaturalONE.
+
 ## Upgrade And Rollback
 
 Upgrade one product:
